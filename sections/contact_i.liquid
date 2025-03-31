@@ -1,0 +1,436 @@
+<section class="_contact _1">
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_flex">
+        <div class="_head">
+          <div class="_in-head _1">
+            <h2 class="_title">{{ page.metafields.custom.title }}</h2>
+            <h5 class="_subtitle">{{ page.metafields.custom.subtitle }}</h5>
+          </div>
+          <div class="_in-head _2">
+            <div class="_social">
+              <p class="_info">follow us on social media</p>
+              <div class="_icons">
+                <a class="_icon" href="https://www.tiktok.com/@_cookstix_" target="_blank">
+                  <i class="bi bi-tiktok"></i>
+                </a>
+                <a class="_icon" href="https://www.instagram.com/cookstix/" target="_blank">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a class="_icon d-none" href="https://www.instagram.com/cookstix/" target="_blank">
+                  <i class="bi bi-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <div class="_email">
+              <p class="_info">send us an e-mail</p>
+              <div class="_icons">
+                <a class="_link" href="mailto:hello@mycookstix.com" target="_blank">hello@mycookstix.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_in-body">
+            <div class="fullforms">
+              <div class="_dropdown">
+                <label for="subjectSelector">Subject</label>
+                <select id="subjectSelector" class="form-control">
+                  <option value="wholesale">Wholesale</option>
+                  <option value="general">General Inquiries</option>
+                  <option value="recipes">Recipes / Ingredients Questions</option>
+                </select>
+              </div>
+
+              <div class="forms-1">
+                <div class="form-wholesale">
+                  <div class="klaviyo-form-UQtQNZ"></div>
+                </div>
+                <div class="form-inquiries">
+                  <div class="klaviyo-form-VYAFq6"></div>
+                </div>
+                <div class="form-recipes">
+                  <div class="klaviyo-form-VpmnUx"></div>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              document.addEventListener("DOMContentLoaded", function () {
+                  const subjectSelector = document.getElementById("subjectSelector");
+                  const forms = {
+                      wholesale: document.querySelector(".form-wholesale"),
+                      general: document.querySelector(".form-inquiries"),
+                      recipes: document.querySelector(".form-recipes")
+                  };
+              
+                  function showForm(selectedValue) {
+                      Object.keys(forms).forEach(key => {
+                          forms[key].style.display = key === selectedValue ? "block" : "none";
+                      });
+                  }
+              
+                  // Mostrar el formulario de Wholesale por defecto
+                  showForm("wholesale");
+              
+                  // Cambiar formulario según selección en el dropdown
+                  subjectSelector.addEventListener("change", function () {
+                      showForm(this.value);
+                  });
+              });
+              document.addEventListener("DOMContentLoaded", function () {
+                  const filters = document.querySelectorAll(".faq-filter");
+              
+                  filters.forEach(filter => {
+                      filter.addEventListener("change", function () {
+                          const parent = this.closest(".item-filter");
+                          if (this.checked) {
+                              parent.classList.add("on");
+                          } else {
+                              parent.classList.remove("on");
+                          }
+                      });
+                  });
+              });
+              
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <figure class="_bg">
+    <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/icon-purple.svg?v=1741807497">
+  </figure>
+</section>
+<section class="_contact _2 d-none">
+  <figure class="_bg">
+    <img class="_detail _1" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/detail_green_1.svg?v=1741809311">
+  </figure>
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_head">
+        <h2 class=_title>FREQUENTLY ASKED QUESTIONS</h2>
+      </div>
+      <div class="_body">
+        <div class="fullfaqs">
+          <div class="filter-container">
+            <div class="item-filter filter-good-to-know">
+              <input type="checkbox" id="filter-good-to-know" class="faq-filter" value="good-to-know">
+              <label for="filter-good-to-know">Good to Know</label>
+            </div>
+            <div class="item-filter filter-product">
+              <input type="checkbox" id="filter-product" class="faq-filter" value="product">
+              <label for="filter-product">Product</label>
+            </div>
+            <div class="item-filter filter-order">
+              <input type="checkbox" id="filter-order" class="faq-filter" value="order">
+              <label for="filter-order">My Order</label>
+            </div>
+          </div>
+          
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                 <span class="_data">Why did you come up with Cookstix?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Cookstix was born out of frustration with the chicken stock options available in grocery stores. As passionate food lovers and home cooks, we were tired of dealing with half-used cartons of stock going to waste and bouillon cubes filled with unrecognizable ingredients. We wanted a better way—one that delivered real, authentic chicken stock without waste, guesswork, or compromises.</p>
+                  <p>So, we created Cookstix: perfectly portioned, dehydrated stock sticks that give you exactly what you need, when you need it. No more leftovers, no more measuring—just rich, foundational flavor at your fingertips. Cookstix is designed to simplify cooking, spark creativity, and empower home cooks with confidence, all while saving time, money, and pantry space.</p>
+                  <p>In short, we came up with Cookstix to make cooking easier, more flavorful, and more fun.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                 <span class="_data">When should I use Cookstix?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Use Cookstix any time you would use chicken stock, bouillon, water or any cooking liquid. You can also use it as a dry rub, to boost a sauce or vinaigrette or add a surprising layer of flavor to infused oils and butters!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                 <span class="_data">How do I use Cookstix?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Use Cookstix as a replacement for traditional chicken stock AND as a seasoning enhancer to boost flavor in sauces, vinaigrettes, baked goods and more</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                 <span class="_data">Why Should I use Cookstix?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>You should use Cookstix because it offers the perfect balance of convenience, quality, and real flavor—without the waste or hassle of traditional chicken stock. Here’s why Cookstix is a game-changer:</p>
+                  <p><strong>Exactly What You Need, When You Need It</strong> – No more half-used cartons going bad in the fridge or messy measuring. Just the right amount of rich, savory stock at your fingertips.</p>
+                  <p><strong>Real, Authentic Flavor</strong> – Made with high-quality, real ingredients, Cookstix delivers the depth and richness of homemade stock—without fillers, additives, or artificial flavors.</p>
+                  <p><strong>Simplifies Cooking & Saves Time</strong> – Whether you're making soup, sauce, grains, or anything that needs a flavor boost, Cookstix offers a delicious and impactful flavor that will add to your end dish!</p>
+                  <p><strong>Sparks Creativity & Builds Confidence</strong> – With Cookstix, home cooks can experiment freely, knowing they have an easy, reliable way to enhance their dishes.</p>
+                  <p><strong>Saves Money & Reduces Pantry Clutter</strong> – No need to store bulky cartons or deal with wasted product—just lightweight, shelf-stable sticks that are ready whenever you are.</p>
+                  <p>In short, Cookstix makes cooking smarter, easier, and more delicious.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                 <span class="_data">Where can I find Cookstix</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>You can find Cookstix on Amazon or at these retailers new year</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                 <span class="_data">How can I carry Cookstix at my store?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>We'd love for you to carry our product! You can buy wholesale on Faire, or reach out to us and we can align on your choice of distributor</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                 <span class="_data">How can I get in touch?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>say hi: <a href="mailto:hello@mycookstix.com">hello@mycookstix.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="good-to-know">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                 <span class="_data">Is this a Sipping Broth?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Cookstix is primarily designed as a versatile cooking ingredient to enhance the flavor of your dishes. While it's not specifically marketed as a sipping beverage, you can certainly mix Cookstix with hot water to create a warm, savory broth for sipping. This makes it a convenient option for those who enjoy a quick, flavorful drink.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="accordion-item faq-item" data-category="order">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                 <span class="_data">Where's my Order</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Just here: <a class="_btn _1" href="https://account.mycookstix.com/orders">Go to My Orders</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="order">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                 <span class="_data">Can I edit my order?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>If you need to edit your order, please email us at <a href="mailto:hello@mycookstix.com">hello@mycookstix.com</a> with your order number and the changes you'd like to make. We'll do our best to accommodate your request before your order is processed and shipped.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="order">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                 <span class="_data">My order was damaged, what do I do?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Due to this being a food product, we do not accept returns at this time. Please inspect your order upon receipt and contact us immediately if the item is defective, damaged or if you receive the wrong item, so that we can evaluate the issue and make it right. Make sure to snap a pic of the damage and send it with your inquiry.</p>
+                  <p>We will notify you once we've received and evaluated your inquiry, we'll let you know the refund status. If approved, you'll be automatically refunded on your original payment method within 10 business days. Please remember it can take some time for your bank or credit card company to process and post the refund too.</p>
+                  <p>If more than 15 business days have passed since we've approved your return, please contact us at hello@mycookstix.com.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="order">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                 <span class="_data">Refunds/Returns/Exchange Policy</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Due to this being a food product, we do not accept returns at this time. Have any issues? Email us at <a href="mailto:hello@mycookstix.com">hello@mycookstix.com</a></p>
+                  <br>
+                  <p><strong>Damages and issues</strong></p>
+                  <p>Please inspect your order upon reception and contact us immediately if the item is defective, damaged or if you receive the wrong item, so that we can evaluate the issue and make it right. Make sure to snap a pic of the damage and send it with your inquiry.</p>
+                  <br>
+                  <p><strong>Exchanges</strong></p>
+                  <p>Because this is a food product, we do not accept exchanges.</p>
+                  <br>
+                  <p><strong>Refunds</strong></p>
+                  <p>We will notify you once we've received and evaluated your inquiry, we'll let you know the refund status. If approved, you'll be automatically refunded on your original payment method within 10 business days. Please remember it can take some time for your bank or credit card company to process and post the refund too.</p>
+                  <p>If more than 15 business days have passed since we've approved your return, please contact us at <a href="mailto:hello@mycookstix.com">hello@mycookstix.com</a>.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item faq-item" data-category="product">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                 <span class="_data">How do I prepare Cookstix?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Simple open the stick, pour the powder into 24 oz of hot water and stir to combine. It may take a minute to fully dissolve</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="product">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                 <span class="_data">What if I don't need the whole stick?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>You can use what you need and store the rest in the cabinet or spice rack for a later date!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="product">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq16">
+                 <span class="_data">How many servings per stick?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq16" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>There are 3 servings per stick, or 3 cups of fully hydrated liquid</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item" data-category="product">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq17">
+                 <span class="_data">How can I use Cookstix?</span>
+                  <span class="_icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </button>
+              </h2>
+                <div id="faq17" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>You can use this as you would homemade or boxed chicken stock or bouillon. But get creative - use it to marinate proteins, season veggies, build flavors in curries and stews, add into a vinaigrette or flavored butter and so much more!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filters = document.querySelectorAll(".faq-filter");
+            const faqItems = document.querySelectorAll(".faq-item");
+        
+            function filterFAQs() {
+                const activeFilters = Array.from(filters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+        
+                faqItems.forEach(item => {
+                    const category = item.getAttribute("data-category");
+                    if (activeFilters.length === 0 || activeFilters.includes(category)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            }
+        
+            filters.forEach(filter => {
+                filter.addEventListener("change", filterFAQs);
+            });
+        
+            filterFAQs();
+        });
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Contact I",
+    "settings": []
+  }
+{% endschema %}

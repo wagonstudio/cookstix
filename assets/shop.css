@@ -1,0 +1,170 @@
+/* I */
+  body.template-collection-wagon div#shopify-section-foot {
+    z-index: 14;
+  }
+  section._shop._1 {
+    position: relative;
+    background: #0398dd;
+    padding-bottom:5rem;
+    z-index:10;
+  }
+  section._shop._1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% - 6rem);
+    width: 100%;
+    display: block;
+    background: #ffc60a;
+  }
+  section._shop._1 ._head {
+    padding: 6rem 0 2rem;
+    text-align: center;
+  }
+  section._shop._1 ._cards-pdp{
+    justify-content:center;
+    padding: 2rem 0 5rem;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1 ._content ._btn {
+    top: calc(100% - 0.5rem);
+    right: -30%;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1 ._content{
+    padding: 0;
+    width: 100%;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1 {
+    margin: 0;
+    padding: 2rem;
+    min-height: 550px !important;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1 ._content ._media figure._pic {
+    height: 100%;
+    width: 70%;
+  }
+  section._shop._1 ._head ._title {
+    width: 900px;
+    text-transform: lowercase;
+    font-family: 'Tenon', sans-serif;
+    color: #1D3B8A;
+    font-weight: 700;
+    line-height: 1;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+  }
+  section._shop._1 ._head ._text {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: lowercase;
+    font-family: 'Tenon', sans-serif;
+    color: #1D3B8A;
+  }
+  ._cards-pdp article._pdp._1 ._content ._info ._price {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 1rem;
+  }
+  section._shop._1 figure._bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  section._shop._1 figure._bg img{
+    width:100%;
+    height:100%;
+    object-fit:contain
+  }
+  section._shop._1 > div {
+    position: relative;
+    z-index: 2;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1.pdp-bundle {
+    background: #fff;
+    color:#9E1F63;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1.pdp-bundle ._content ._info *{
+    color:#9E1F63;
+  }
+
+  section._shop._1 ._cards-pdp article._pdp._1 ._content ._info ._text {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 123%;
+    text-transform: lowercase;
+  }
+  ._cards-pdp article._pdp._1.pdp-bundle ._content ._media {
+    min-height: 200px !important;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1 ._content ._info ._name {
+    margin-bottom: 1rem;
+  }
+  section._shop._1 ._cards-pdp article._pdp._1.pdp-bundle ._content ._btn {
+    color: #fff;
+  }
+  ._cards-pdp article._pdp._1.pdp-bundle ._content ._media figure._pic {
+    width: 50% !important;
+  }
+
+  @media(min-width:1200px){
+    section._shop._1 ._cards-pdp article._pdp._1 {
+      width: calc(25% - 1rem);
+    }
+  }
+  @media(min-width:992px){ 
+    section._shop._1 ._head ._title {
+      font-size: 5.0625rem;
+    }
+    section._shop._1 figure._plop._2 {
+      background: url('https://cdn.shopify.com/s/files/1/0901/1216/4158/files/burbujas_amarillas.svg?v=1740679470');
+        bottom: 0.5rem;
+        width: 100%;
+        height: 17rem;
+        background-repeat: repeat-x !important;
+        background-size: contain !important;
+        background-position-x: 0%;
+        background-position-y: bottom !important;
+        position: absolute;
+    }
+  }
+  @media(max-width:991px){
+    body.template-collection-wagon div#shopify-section-foot footer {
+      padding-top: 4rem !important;
+    }
+    section._shop._1 figure._plop._2 {
+      background: url('https://cdn.shopify.com/s/files/1/0901/1216/4158/files/burbujas_amarillas.svg?v=1740679470');
+      display: block !important;
+      position: absolute;
+      top: calc(100% - 7rem);
+      width: 100%;
+      height: 7rem;
+      background-repeat: repeat-x !important;
+      background-size: contain !important;
+      background-position-x: 0%;
+      background-position-y: bottom !important;
+    }
+    section._shop._1 ._head ._title {
+      font-size: 3rem;
+    }
+    ._cards-pdp{
+      grid-gap: 1rem;
+    }
+    section._shop._1 ._head {
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    section._shop._1 ._cards-pdp article._pdp._1 ._content ._btn{
+      top: inherit !important;
+      bottom: -4rem;
+    }
+  }
+/* END I */

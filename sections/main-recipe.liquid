@@ -1,0 +1,392 @@
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+<section class="_article _i">
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_card">
+        <div class="_inside">
+          <div class="_info">
+            <div class="_in">
+              <div class="_data d-none">
+                <span class="circle-divider caption-with-letter-spacing">
+                  {{- article.published_at | time_tag: format: 'date' -}}
+                </span>
+                <span class="caption-with-letter-spacing">
+                  <span>{{ article.author }}</span>
+                </span>
+              </div>
+              <h3 class="_title">{{ article.title | escape }}</h3>
+              <div class="_description">
+                {{ article.content }}
+              </div>
+              <div class="_activity">
+                <div class="_difficulty">
+                  <p class="_subtitle">Difficulty</p>
+                  <div class="_dots">
+                    {% assign difficulty_raw = article.metafields.custom.difficulty %}
+                    {% assign difficulty = difficulty_raw | default: 1 | plus: 0 %}
+                    {% for i in (1..5) %}
+                      {% if i <= difficulty %}
+                        <span class="_dot _full"></span>
+                      {% else %}
+                        <span class="_dot"></span>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="_time">
+                  <p class="_subtitle">Time</p>
+                  <div class="_timing">
+                    {% assign total_minutes = article.metafields.custom.time | default: 0 %}
+                    
+                    {% if total_minutes >= 60 %}
+                      {% assign hours = total_minutes | divided_by: 60 %}
+                      {% assign minutes = total_minutes | modulo: 60 %}
+                      <p class="data">
+                        {% if hours == 1 %}
+                          {{ hours }} hr
+                        {% else %}
+                          {{ hours }} hrs
+                        {% endif %}
+                        
+                        {% if minutes > 0 %}
+                          {{ minutes }} min
+                        {% endif %}
+                      </p>
+                    {% else %}
+                      <p class="data">{{ total_minutes }} min</p>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="_servings">
+                  <p class="_subtitle">Servings</p>
+                  <div class="_timing">
+                    <p class="data">{{ article.metafields.custom.servings }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+          </div>
+          <div class="_media">
+            <figure class="m-0">
+              <img srcset="
+                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ article.image | image_url }} {{ article.image.width }}w
+                "
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                src="{{ article.image | image_url: width: 1100 }}"
+                loading="eager"
+                fetchpriority="high"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+                alt="{{ article.image.alt | escape }}"
+              >
+            </figure>
+          </div>
+        </div>
+        <figure class="_bg">
+          <img class="_1" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/zanahoria-blue-2.svg?v=1741110530">
+          <img class="_2" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/ginger-blue-2.svg?v=1741110485">
+          <img class="_3" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/coco-blue-2.svg?v=1741110523">
+          <img class="_4" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/onion-blue.svg?v=1741110167">
+          <img class="_5" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/stake-blue.svg?v=1741110167">
+          <img class="_6" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/lemon-blue.svg?v=1741110167">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="_article _ii">
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_flex">
+        <div class="_media">
+          {% if article.image %}
+            <figure class="_video">
+              <img src="{{ article.metafields.custom.video_tutorial | img_url: 'large' }}" alt="{{ article.title }}">
+            </figure>
+          {% endif %}
+          <a class="_btn_link_back" href="https://mycookstix.com/blogs/recipes/">back</a>
+        </div>
+        <div class="_info">
+          <div class="_inside ingredients-content">
+            <h2 class="_subtitle">Ingredients</h2>
+            <div class="_ingredients">
+              {{ article.metafields.custom.ingredient | metafield_tag }}
+            </div>
+          </div>
+          
+          <div class="_inside preparation-content">
+            <h2 class="_subtitle">Preparation</h2>
+            <div class="_preparation">
+              {{ article.metafields.custom.preparation | metafield_tag }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</section>
+
+<section class="_recipes _ii">
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_head">
+        <h2 class="_title">one foundation, three bold flavors. <br class="d-none d-lg-block">unlock your inner chef.</h2>
+        <a href="https://mycookstix.com/collections/shop" class="_btn _1">
+          <span>shop all</span>
+        </a>
+      </div>
+      <div class="_cards-pdp">
+        {% assign shop = collections.frontpage %}
+        {% for pdp in shop.products %}
+          {% if pdp.id != product.id %}
+            {% render 'pdp', product: pdp %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <figure class="_bg">
+    <figure class="_plop _1">
+      <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/curve_yellow_1.svg?v=1740968859">
+    </figure>
+    <figure class="_plop _2"></figure>
+    <div class="_bgin"></div>
+  </figure>
+  <aside class="_content_marquee _1">
+    <div class="_marquee _1">
+      <div class="_track">
+        <div class="_content">
+          <h6 class="_h6 _anek-d _w-500">
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Sugar 
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Added Chicken Flavor
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Clean and high-quality ingredients   
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Lightweight form
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Sugar 
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Added Chicken Flavor
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Clean and high-quality ingredients   
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Lightweight form
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Sugar 
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Added Chicken Flavor
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Clean and high-quality ingredients   
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Lightweight form
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span>    
+          </h6>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>
+{%- if blog.comments_enabled? -%}
+  <div class="article-template__comment-wrapper background-secondary">
+    <div
+      id="comments"
+      class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    >
+      {%- if article.comments_count > 0 -%}
+        {%- assign anchorId = '#Comments-' | append: article.id -%}
+
+        <h2 id="Comments-{{ article.id }}" tabindex="-1">
+          {{ 'blogs.article.comments' | t: count: article.comments_count }}
+        </h2>
+        {% paginate article.comments by 5 %}
+          <div class="article-template__comments">
+            {%- if comment.status == 'pending' and comment.content -%}
+              <article id="{{ comment.id }}" class="article-template__comments-comment">
+                {{ comment.content }}
+                <footer class="right">
+                  <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
+                </footer>
+              </article>
+            {%- endif -%}
+
+            {%- for comment in article.comments -%}
+              <article id="{{ comment.id }}" class="article-template__comments-comment">
+                {{ comment.content }}
+                <footer class="right">
+                  <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span
+                  ><span class="caption-with-letter-spacing">
+                    {{- comment.created_at | time_tag: format: 'date' -}}
+                  </span>
+                </footer>
+              </article>
+            {%- endfor -%}
+            {% render 'pagination', paginate: paginate, anchor: anchorId %}
+          </div>
+        {% endpaginate %}
+      {%- endif -%}
+      {% form 'new_comment', article %}
+        {%- liquid
+          assign post_message = 'blogs.article.success'
+          if blog.moderated? and comment.status == 'unapproved'
+            assign post_message = 'blogs.article.success_moderated'
+          endif
+        -%}
+        <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
+        {%- if form.errors -%}
+          <div class="form__message" role="alert">
+            <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
+              <span class="svg-wrapper">
+                {{- 'icon-error.svg' | inline_asset_content -}}
+              </span>
+              {{ 'templates.contact.form.error_heading' | t }}
+            </h3>
+          </div>
+          <ul class="form-status-list caption-large">
+            {%- for field in form.errors -%}
+              <li>
+                <a href="#CommentForm-{{ field }}" class="link">
+                  {%- if form.errors.translated_fields[field] contains 'author' -%}
+                    {{ 'blogs.article.name' | t }}
+                  {%- elsif form.errors.translated_fields[field] contains 'body' -%}
+                    {{ 'blogs.article.message' | t }}
+                  {%- else -%}
+                    {{ form.errors.translated_fields[field] }}
+                  {%- endif -%}
+                  {{ form.errors.messages[field] }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- elsif form.posted_successfully? -%}
+          <div class="form-status-list form__message" role="status">
+            <h3 class="form-status" tabindex="-1" autofocus>
+              <span class="svg-wrapper">
+                {{- 'icon-success.svg' | inline_asset_content -}}
+              </span>
+              {{ post_message | t }}
+            </h3>
+          </div>
+        {%- endif -%}
+
+        <div
+          {% if blog.moderated? == false %}
+            class="article-template__comments-fields"
+          {% endif %}
+        >
+          <div class="article-template__comment-fields">
+            <div class="field field--with-error">
+              <input
+                type="text"
+                name="comment[author]"
+                id="CommentForm-author"
+                class="field__input"
+                autocomplete="name"
+                value="{{ form.author }}"
+                aria-required="true"
+                required
+                {% if form.errors contains 'author' %}
+                  aria-invalid="true"
+                  aria-describedby="CommentForm-author-error"
+                {% endif %}
+                placeholder="{{ 'blogs.article.name' | t }}"
+              >
+              <label class="field__label" for="CommentForm-author">
+                {{- 'blogs.article.name' | t }}
+                <span aria-hidden="true">*</span></label
+              >
+              {%- if form.errors contains 'author' -%}
+                <small id="CommentForm-author-error">
+                  <span class="form__message">
+                    <span class="svg-wrapper">
+                      {{- 'icon-error.svg' | inline_asset_content -}}
+                    </span>
+                    {{- 'blogs.article.name' | t }}
+                    {{ form.errors.messages.author }}.</span
+                  >
+                </small>
+              {%- endif -%}
+            </div>
+            <div class="field field--with-error">
+              <input
+                type="email"
+                name="comment[email]"
+                id="CommentForm-email"
+                autocomplete="email"
+                class="field__input"
+                value="{{ form.email }}"
+                autocorrect="off"
+                autocapitalize="off"
+                aria-required="true"
+                required
+                {% if form.errors contains 'email' %}
+                  aria-invalid="true"
+                  aria-describedby="CommentForm-email-error"
+                {% endif %}
+                placeholder="{{ 'blogs.article.email' | t }}"
+              >
+              <label class="field__label" for="CommentForm-email">
+                {{- 'blogs.article.email' | t }}
+                <span aria-hidden="true">*</span></label
+              >
+              {%- if form.errors contains 'email' -%}
+                <small id="CommentForm-email-error">
+                  <span class="form__message">
+                    <span class="svg-wrapper">
+                      {{- 'icon-error.svg' | inline_asset_content -}}
+                    </span>
+                    {{- 'blogs.article.email' | t }}
+                    {{ form.errors.messages.email }}.</span
+                  >
+                </small>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="field field--with-error">
+            <textarea
+              rows="5"
+              name="comment[body]"
+              id="CommentForm-body"
+              class="text-area field__input"
+              aria-required="true"
+              required
+              {% if form.errors contains 'body' %}
+                aria-invalid="true"
+                aria-describedby="CommentForm-body-error"
+              {% endif %}
+              placeholder="{{ 'blogs.article.message' | t }}"
+            >{{ form.body }}</textarea>
+            <label class="form__label field__label" for="CommentForm-body">
+              {{- 'blogs.article.message' | t }}
+              <span aria-hidden="true">*</span></label
+            >
+          </div>
+          {%- if form.errors contains 'body' -%}
+            <small id="CommentForm-body-error">
+              <span class="form__message">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{- 'blogs.article.message' | t }}
+                {{ form.errors.messages.body }}.</span
+              >
+            </small>
+          {%- endif -%}
+        </div>
+        {%- if blog.moderated? -%}
+          <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
+        {%- endif -%}
+        <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
+      {% endform %}
+    </div>
+  </div>
+{%- endif -%}
+
+<script type="application/ld+json">
+  {{ article | structured_data }}
+</script>
+
+
+{% schema %}
+  {
+    "name": "Main Recipe",
+    "settings": []
+  }
+{% endschema %}

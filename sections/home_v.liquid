@@ -1,0 +1,38 @@
+<main class="_home _5">
+  <section class="_v">
+    <div class="_inside">
+      <div class="_container _1">
+        <div class="_content">
+          <div class="_head text-center">
+            <div class="_title">{{ section.settings.title_i }}</div>
+          </div>
+        </div>
+      </div>
+      <figure class="_media d-none">
+        <figure>
+          <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/Testimonials.png?v=1737145299">
+        </figure>
+      </figure>
+    </div>
+  </section>
+  <span class="_trigger" id="trigger_home_v-1"></span>
+  <span class="_trigger" id="trigger_home_v-2"></span>
+  <span class="_trigger" id="trigger_home_v-3"></span>
+  <span class="_trigger" id="trigger_home_v-4"></span>
+  <span class="_trigger" id="trigger_home_v-5"></span>
+  <span class="_trigger" id="trigger_home_v-6"></span>
+</main>
+
+{% schema %}
+  {
+    "name": "Home V",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title_i",
+        "label": "Title I",
+        "default": "flavor that speaks for itself"
+      }
+    ]
+  }
+{% endschema %}

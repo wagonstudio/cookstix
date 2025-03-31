@@ -1,0 +1,170 @@
+<section class="_about _1">
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_flex">
+        <div class="_one">
+          <div class="_inside">
+            <div class="_in">
+              <h5 class="_subtitle">{{ page.metafields.custom.subtitle }}</h5>
+              <h2 class="_title">{{ page.metafields.custom.title }}</h2>
+            </div>
+            <div class="_cards">
+              <div class="_card _1">
+                <div class="_in-card">
+                  {{ page.content }}
+                </div>
+              </div>
+              <div class="_card _2">
+                <div class="_in-card">
+                  <p><b>Our dehydrated stock sticks, deliver deep, homemade flavor in seconds.</b> No measuring, no waste—just pure, bold taste that transforms everyday dishes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="_two">
+          <div class="_medias">
+            <figure class="_media _1">
+              <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/Pic2.jpg?v=1742306903">
+            </figure>
+            <figure class="_media _2">
+              <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/pic-about.jpg?v=1741380413">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="_about _2">
+  <figure class="_union">
+    <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/union-about.png?v=1741380706">
+  </figure>
+</section>
+<section class="_about _3">
+  <div class="_first">
+    <div class="_card">
+      <figure class="_ingredient _chicken">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/chicken.svg?v=1736975863">
+      </figure>
+      <figure class="_ingredient _zanahoria">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/zanahoria2.svg?v=1740602893">
+      </figure>
+      <figure class="_ingredient _cebolla">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/cebolla.svg?v=1736975862">
+      </figure>
+      <figure class="_ingredient _pepino">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/pepino.svg?v=1736975862">
+      </figure>
+      <div class="_in-card">
+        <div id="notes-carousel" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% assign notes_blog = blogs['notes'] %}
+              {%- assign sorted_articles = notes_blog.articles | sort: 'metafields.custom.order' | reverse -%}
+              
+              {% for article in sorted_articles %}
+                <li class="splide__slide">
+                  <div class="_flex">
+                    <figure class="_media-card">
+                      {% if article.image %}
+                        <img src="{{ article.image | img_url: 'large' }}" alt="{{ article.title }}">
+                      {% endif %}
+                    </figure>
+                    <div class="_content-card">
+                      <div class="_inside-card">
+                        <div class="_subtitle d-none">the perfect recipe</div>
+                        <h4 class="_title-card">{{ article.title }}</h4>
+                        <div class="_description-card">
+                          {{ article.content }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+
+
+            </ul>
+          </div>
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev" type="button" aria-controls="notes-carousel-track" aria-label="Go to last slide">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="splide__arrow splide__arrow--next" type="button" aria-controls="notes-carousel-track" aria-label="Next slide">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('#notes-carousel', {
+              type: 'loop',
+              perPage: 1,
+              perMove: 1,
+              gap: '200%',
+              pagination: true,
+              arrows: true,
+              padding: { left: '0', right: '0' },
+              breakpoints: {}
+            });
+        
+            
+            splide.mount();
+
+                    
+            // Asegurar que los números se asignen correctamente
+            function updatePaginationNumbers() {
+              document.querySelectorAll('.splide__pagination__page').forEach((button, index) => {
+                button.innerHTML = (index + 1); // Usamos innerHTML para forzar la renderización del número
+              });
+            }
+        
+            // Aplicar los números cuando la paginación esté lista
+            splide.on('pagination:mounted', function () {
+              updatePaginationNumbers();
+            });
+        
+            // Asegurar que los números persistan incluso si hay cambios en el slider
+            splide.on('move', function () {
+              updatePaginationNumbers();
+            });
+        
+            // Aplicar los números nuevamente después de la carga completa
+            setTimeout(updatePaginationNumbers, 500);
+          });
+        </script>
+
+      </div>
+    </div>
+  </div>
+  <div class="_second">
+    <div class="_content">
+      <div class="_container _3">
+        <h3 class="_title">because cooking with stock should make food taste exponentially better</h3>
+        <p class="_description">we've spent years perfecting chicken soup, so we know great stock. that's why we created cookstix - real, instant stock in perfectly portioned sticks</p>
+      </div>
+    </div>
+    <figure class="_medias">
+      <figure class="_media _1">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/roasted-broccolini-on-the-plate-2025-01-09-04-25-51-utc.jpg?v=1742307951" />
+      </figure>
+      <figure class="_media _2">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/tasty-tom-yum-soup-on-pink-background-2023-11-27-04-56-06-utc.jpg?v=1742308071" />
+      </figure>
+      <figure class="_media _3">
+        <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/plate-of-mexican-carnita-tacos-with-beer-in-backgr-2023-11-27-05-04-18-utc.jpg?v=1742308071" />
+      </figure>
+    </figure>
+  </div>
+    
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "About I",
+    "settings": []
+  }
+{% endschema %}

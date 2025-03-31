@@ -1,0 +1,819 @@
+/* I */
+  section._recipes._i {
+    position: relative;
+  }
+  section._recipes._i ._head>div {
+    z-index: 2;
+    position: relative;
+  }
+  section._recipes._i ._head ._inside{
+    text-align:center;
+  }
+  section._recipes._i ._head ._inside ._title {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: lowercase;
+    font-family: 'Tenon', sans-serif;
+    color: #fff;
+  }
+  section._recipes._i ._head figure._bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  section._recipes._i ._head figure._bg img {
+    top: 0;
+    z-index: 2;
+    position: absolute;
+    object-fit: cover;
+    max-height: 120%;
+    max-width: 40vw;
+    height: 120%;
+  }
+  section._recipes._i ._head figure._bg img._left {
+    left:0;
+    object-position: right;
+  }
+  section._recipes._i ._head figure._bg img._right {
+    right:0;
+    object-position: left;
+  }
+  section._recipes._i ._head figure._bg figure._plop._1 {
+    position: absolute;
+    width: 100%;
+    background-repeat: repeat-x !important;
+    background-size: 100% !important;
+    background-position-y: bottom !important;
+    background-position-x: 0%;
+    background: url('https://cdn.shopify.com/s/files/1/0901/1216/4158/files/plop-blue.svg?v=1740773196');
+  }
+  section._recipes._i ._head figure._bg figure._plop._1 img {
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    object-position:bottom;
+  }
+  section._recipes._i ._body {
+    padding-top: 7rem;
+    padding-bottom: 6vw;
+  }
+  section._recipes._i ._body.filter-all{
+    background: #1D3B8A;
+  }
+  section._recipes._i ._body.filter-chili-cumin-chicken{
+    background: #5d7831;
+  }
+  section._recipes._i ._body.filter-classic-roasted-chicken{
+    background: #1D3B8A;
+  }
+  section._recipes._i ._body.filter-coconut-ginger-chicken{
+    background: #712b62;
+  }
+  section._recipes._i ._body ._filter .filter-tags {
+    display: flex;
+    grid-gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom:3rem;
+    justify-content:center;
+  }
+  section._recipes._i ._body ._filter .filter-tags .filter-btn {
+    border: 1px solid;
+    border-radius: 99rem;
+    padding: 0.5rem 1rem;
+    line-height: 1;
+    font-size: 1rem;
+    background: transparent;
+    color: #fff;
+    font-family: 'Tenon', sans-serif;
+    font-weight: 500;
+  }
+  section._recipes._i ._body ._filter .filter-tags .filter-btn.active {
+    background: #fff;
+  }
+  section._recipes._i ._body.filter-all ._filter .filter-tags .filter-btn.active {
+    color: #1d3b8a;
+  }
+  section._recipes._i ._body.filter-classic-roasted-chicken ._filter .filter-tags .filter-btn.active{
+    color: #1d3b8a;
+  }
+  section._recipes._i ._body.filter-chili-cumin-chicken ._filter .filter-tags .filter-btn.active{
+    color: #5d7831;
+  }
+  .blog-articles__article.article {
+    padding: 0 0 1rem;
+  }
+  .blog-articles {
+    display: flex;
+    grid-gap: 2vw;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+    justify-content: center;
+  }
+  ._card-article {
+    position: relative;
+  }
+  ._card-article ._content-card ._description-card{
+     margin-bottom:1rem; 
+  }
+  ._card-article ._content-card ._description-card p {
+    margin: 0;
+  }
+  ._card-article ._content-card ._activity {
+    display: flex;
+    grid-gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  ._card-article ._content-card ._activity ._difficulty {
+      width: calc(70% - 1rem);
+  }
+  ._card-article ._content-card ._activity ._time {
+    width: 30%;
+  }
+  ._card-article ._content-card ._activity ._subtitle {
+    margin-bottom: .5rem;
+    font-family: Tenon, sans-serif;
+    text-transform: lowercase;
+    color: #1d3b8a;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  ._card-article ._content-card ._activity ._timing p {
+    margin: 0;
+  }
+  ._card-article ._content-card ._activity ._timing {
+    line-height: 0.5rem;
+    margin-bottom: 0;
+    font-family: 'Tenon', sans-serif;
+    color: #1d3b8a;
+    font-weight: 100;
+  }
+  section._recipes._ii {
+    position: relative;
+    padding-bottom: 15rem;
+    margin-bottom: -5rem;
+    z-index: 10;
+  }
+  section._recipes._ii figure._bg {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: calc(100% + 7vw);
+    overflow: hidden;
+    top: -5vw;
+  }
+  section._recipes._ii figure._bg figure._plop._1 {
+    position: absolute;
+    top: 0;
+    height: 5vw;
+    width: 100%;
+  }
+  section._recipes._ii figure._bg figure._plop._1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  section._recipes._ii figure._bg ._icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    object-fit: cover;
+    top: 1rem;
+  }
+  section._recipes._ii figure._bg ._bgin{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 12vw);
+    z-index: 1;
+    object-fit: cover;
+    top: 4vw;
+    background: #ffc60a;
+    display: block !important;
+    background-image: url('https://cdn.shopify.com/s/files/1/0901/1216/4158/files/bg_icons.svg?v=1740679470');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  section._recipes._ii ._content {
+    position: relative;
+    z-index: 3;
+  }
+  section._recipes._ii ._content ._head {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  section._recipes._ii ._content ._head ._title {
+    font-family: 'Tenon', sans-serif;
+    color: #1d3b8a;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+  }
+  section._recipes._ii>._content {
+    overflow: hidden;
+  }
+  section._recipes._ii aside._content_marquee._1 {
+    position: relative;
+    z-index: 2;
+    margin-top: 5rem;
+    margin-bottom: -5rem;
+  }
+  section._recipes nav.pagination {
+    justify-content: end;
+  }
+  section._recipes .pagination-wrapper {
+    margin: 0 0 2rem;
+  }
+  section._recipes .pagination-wrapper ul.pagination__list.list-unstyled {
+    display: flex;
+    grid-gap: 1rem;
+  }
+  section._recipes .pagination-wrapper ul.pagination__list.list-unstyled li {
+    max-width: max-content;
+  }
+  section._recipes .pagination-wrapper ul.pagination__list.list-unstyled li a {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1d3b8a;
+    border: 0;
+    background: #ffc60a;
+    border-radius: 999rem;
+    font'backface-visibility:';
+    font-weight: 600;
+    font-family: 'tenon', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  section._recipes .pagination-wrapper ul.pagination__list.list-unstyled li a:after {
+    opacity: 0;
+  }
+  @media(min-width:1200px){
+    section._recipes._i ._head{
+      position:relative;
+      background: #0098DD;
+      padding: 7vw 0 5vw;
+      z-index: 2;
+    }
+    .blog-articles .article {
+      max-width: calc(33.33% - 1rem);
+      width: 350px;
+    }
+  }
+  @media(max-width:1199px) and (min-width:992px){
+    .blog-articles .article,
+    ._cards-pdp article._pdp._1{
+      max-width: calc(33.33% - 1rem);
+      width: 350px;
+    }
+  }
+  @media(max-width:991px) and (min-width:768px){
+    .blog-articles .article,
+    ._cards-pdp article._pdp._1 {
+      width: calc(50% - 1rem);
+    }
+  }
+  @media(max-width:767px) and (min-width:576px){
+    .blog-articles .article,
+    ._cards-pdp article._pdp._1 {
+      width: calc(50% - 1rem);
+    }
+  }
+  @media(max-width:1199px){
+    section._recipes._i ._head{
+      position:relative;
+      background: #0098DD;
+      padding: 3rem 0 0;
+      z-index: 2;
+    } 
+  }
+  @media(min-width:992px){
+      
+    section._recipes._ii figure._bg figure._plop._2{
+      background: url('https://cdn.shopify.com/s/files/1/0901/1216/4158/files/burbujas_amarillas.svg?v=1740679470');
+      bottom: 0.5rem;
+      width: 100%;
+      height: 17rem;
+      background-repeat: repeat-x !important;
+      background-size: contain !important;
+      background-position-x: 0%;
+      background-position-y: bottom !important;
+      position: absolute; 
+    }
+    body.template-blog-recipes footer._footer {
+      padding-top: 14rem !important;
+    }
+    body.gradient.template-article-wagon footer._footer {
+      padding-top: 14rem !important;
+    }
+    section._recipes._i ._head figure._bg figure._plop._1 {
+      position: absolute;
+      bottom: -4vw;
+      height: 4.2vw;
+    }
+  }
+  @media(max-width:991px){
+    section._recipes._ii figure._bg figure._plop._2{
+      background: url('https://cdn.shopify.com/s/files/1/0901/1216/4158/files/burbujas_amarillas.svg?v=1740679470');
+      display: block !important;
+      position: absolute;
+      top: calc(100% - 7rem);
+      width: 100%;
+      height: 7rem;
+      background-repeat: repeat-x !important;
+      background-size: contain !important;
+      background-position-x: 0%;
+      background-position-y: bottom !important;
+    }
+    body.template-blog-recipes footer._footer {
+      padding-top: 8rem !important;
+    }
+    body.gradient.template-article-wagon footer._footer {
+      padding-top: 8rem !important;
+    }
+    section._recipes._i ._head figure._bg figure._plop._1 {
+      position: absolute;
+      bottom: -4rem;
+      height: 4.2rem;
+    }
+    section._recipes._i ._head ._inside ._title{
+      font-size: 2.5rem;
+    }
+    section._recipes._i ._body ._filter .filter-tags{
+      grid-gap:0.5rem;
+    }
+    section._recipes._ii ._content ._head ._title{
+      font-size:2rem;
+    }
+    section._recipes._i ._head figure._bg figure._plop._1,
+    section._recipes._ii figure._bg figure._plop._2{
+      background-size:150% !important;
+    }
+  }
+  @media(max-width:575px){
+    .blog-articles .article,
+    ._cards-pdp article._pdp._1 {
+      width: 100%;
+    }
+  }
+  ._dots ._dot._full {
+    background: #1d3b8a;
+  }
+  ._dots ._dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 99rem;
+    border: 1px solid;
+  }
+  ._dots {
+    display: flex;
+    grid-gap: .5rem;
+    height: 0.5rem;
+    align-items: center;
+    color:#1d3b8a;
+  }
+  section._article._i ._card > ._inside ._info ._in span._dot{
+    border-color:#ffffff;
+  }
+/* END I */
+/* RECIPE */
+  .template-article-wagon footer._footer {
+    padding-top: 8rem;
+  }
+  section._article._i {
+    position: relative;
+    padding: 5vw 0;
+    background: #1d3b8a;
+    position: relative;
+  }
+  section._article._i ._card {
+    position: relative;
+    background: #0098DD;
+    border-radius: 1.5vw;
+  }
+  section._article._i ._card > figure {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  section._article._i ._card > figure img._1 {
+    top: 0;
+    left: 1%;
+  }
+  section._article._i ._card > figure img._2 {
+    top: 30%;
+    left: -3%;
+  }
+  section._article._i ._card > figure img._3 {
+    top: -5%;
+    left: 13%;
+  }
+  section._article._i ._card > figure img._4 {
+    bottom: 35%;
+    right: -3%;
+  }
+  section._article._i ._card > figure img._5 {
+    bottom: 10%;
+    right: 0;
+  }
+  section._article._i ._card > ._inside {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1vw;
+  }
+  section._article._i ._card > ._inside ._media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  section._article._i ._card > ._inside ._info ._in ._title {
+    font-family: 'Tenon', sans-serif;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: #fff;
+  }
+  section._article._i ._card > ._inside ._media figure {
+    width: 100%;
+    height: 100%;
+  }
+  section._article._i ._card > ._inside ._info ._in ._description {
+    font-family: 'Tenon', sans-serif;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: lowercase;
+  }
+  section._article._i ._card > ._inside ._info ._in ._activity {
+    display: flex;
+    grid-gap: 1vw;
+    justify-content: space-between;
+    margin-top: 4vw;
+    color: #fff;
+  }
+  section._article._i ._card > ._inside ._info ._in ._activity ._subtitle {
+    text-transform: lowercase;
+    font-weight: 600;
+    font-family: 'Tenon', sans-serif;
+  }
+  section._article._i ._card > ._inside ._info ._in ._subtitle{
+    margin-bottom:0.5vw;
+    line-height: 1;
+  }
+  section._article._i ._card > ._inside ._info ._in span._dot._full {
+    background: #fff;
+  }
+
+
+  
+  section._article._ii ._flex ._media figure._video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section._article._ii ._flex ._info ._inside ._subtitle {
+    color: #FFC60A;
+    text-transform: lowercase;
+    font-family: 'Tenon', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  section._article._ii ._flex ._inside ol li {
+    font-weight: 100 !important;
+  }
+  section._article._ii ._flex ._inside ol li {
+    margin-bottom: 1vw;
+  }
+  section._article._ii ._flex ._inside ol li strong {
+    display: block;
+    width: 100%;
+    font-weight: 700 !important;
+  }
+  section._article._ii ._flex ._inside * {
+    line-height: 1.3;
+  }
+  section._article._ii ._flex ._inside strong {
+    display: block;
+  }
+  section._article._ii ._flex ._media {
+    position: relative;
+  }
+  @media(min-width:1200px){
+      section._article._i ._card > figure img._6 {
+        bottom: 2%;
+        right: 1%;
+        width: 4%;
+      }
+      section._article._i ._card > figure img {
+        position: absolute;
+        max-width: 10%;
+        width: 10%;
+        object-fit: contain;
+      }
+    ._btn_link_back {
+      color: #fff;
+      border: 0.1rem solid;
+      font-family: 'Tenon', sans-serif;
+      padding: 0.3rem 1rem;
+      display: flex;
+      width: max-content;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+    section._article._ii ._flex ._inside{
+      margin-bottom:2vw;
+    }
+    section._article._ii ._flex ._media figure._video {
+      width: 80%;
+      height: 50vh;
+      min-height: 350px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+    section._article._ii {
+      padding: 5rem 0 15rem;
+      background: #1d3b8a;
+      position: relative;
+    }
+    section._article._ii ._flex ._inside ul,
+    section._article._ii ._flex ._inside ol,
+    section._article._ii ._flex ._inside p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      padding-left: 5%;
+      color: #fff;
+      font-family: 'Tenon', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      text-transform: lowercase;
+    }
+    section._article._ii ._flex ._info ._inside ._subtitle{
+      font-size: 3rem;
+    }
+    section._article._i ._card > ._inside ._info ._in span._dot{
+      width: 1rem;
+      height: 1rem;
+    }
+    section._article._i ._card > ._inside ._info ._in .data {
+      margin-bottom: 0;
+      font-size: 1.1rem;
+      font-family: 'Tenon', sans-serif;
+    }
+    section._article._i ._card > ._inside ._info ._in ._dots {
+      height: 2rem;
+    }
+    section._article._i ._card > ._inside ._info ._in ._title {
+      font-size: 3rem;
+    }
+    section._article._i ._card > ._inside ._info ._in ._activity ._subtitle{
+      font-size:2rem;
+    }
+    section._article._i ._card > ._inside ._info ._in ._description {
+      font-size: 1.5rem;
+    }
+    section._article._ii ._flex ._info {
+      width: calc(50% - 1rem);
+    }
+    section._article._ii ._flex ._media {
+      width: calc(50% - 1rem);
+    }
+    section._article._i ._card > ._inside ._media {
+      width: calc(45% - 1rem);
+      overflow: hidden;
+      border-radius: 1.5rem;
+      top: 3rem;
+      position: relative;
+      max-height:70vh;
+      height:500px;
+    }
+    section._article._i ._card > ._inside ._info {
+      width: calc(50% - 1rem);
+      padding-top: 2rem;
+      position: relative;
+    }
+    section._article._i ._card > ._inside ._info ._in {
+      padding: 2rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  @media(max-width:1199px) and (min-width:992px){
+    section._article._ii ._flex ._info {
+      width: calc(50% - 1vw);
+    }
+    section._article._ii ._flex ._media {
+      width: calc(50% - 1vw);
+    }
+    section._article._ii ._flex ._info ._inside {
+      width: 100%;
+    }
+    section._article._ii ._flex ._media figure._video {
+      width: 80%;
+      height: 50vh;
+      min-height: 350px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+  }
+  @media(max-width:1199px){
+      section._article._i ._card > figure img._6 {
+        bottom: 2%;
+        right: 1%;
+        width: 10%;
+      }
+    section._article._i ._card > figure img {
+      position: absolute;
+      max-width: 20%;
+      width: 20%;
+      object-fit: contain;
+    }
+    section._recipes._i ._body{
+      padding-top:8rem;
+    }
+    ._btn_link_back {
+      color: #fff;
+      border: 0.1rem solid;
+      font-family: 'Tenon', sans-serif;
+      padding: 0.3rem 1rem;
+      display: flex;
+      width: max-content;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999rem;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+    body.template-article-wagon footer._footer {
+      padding-top: 9rem !important;
+    }
+    section._article._ii ._flex ._inside:last-of-type{
+      margin-bottom:2rem;
+    }
+    section._article._ii ._flex ._info {
+      order: 1;
+      display: flex;
+      grid-gap: 1rem;
+      flex-wrap: wrap;
+    }
+    section._article._ii ._flex>div {
+      width: 100%;
+    }
+    section._article._ii ._flex {
+      flex-wrap: wrap;
+    }
+    section._article._ii {
+      padding: 3rem 0 6rem;
+      background: #1d3b8a;
+      position: relative;
+    }
+    section._article._ii ._flex ._inside ul,
+    section._article._ii ._flex ._inside ol {
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      color: #fff;
+      font-family: 'Tenon', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      text-transform: lowercase;
+    }
+    section._article._ii ._flex ._info ._inside ._subtitle{
+      font-size: 1.5rem;
+    }
+    section._article._i ._card > ._inside ._info ._in span._dot{
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+    section._article._i ._card > ._inside ._info ._in .data {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      font-family: 'Tenon', sans-serif;
+    }
+    section._article._i ._card > ._inside ._info ._in ._dots {
+      height: 1.2rem;
+    }
+    section._article._i ._card > ._inside ._info ._in ._activity ._subtitle{
+      font-size:0.9rem;
+    }
+    section._article._i ._card > ._inside ._info ._in ._title {
+      font-size: 2rem;
+    }
+    section._article._i{
+      padding-top:4rem;
+    }
+    section._article._i ._card > ._inside ._info ._in ._description {
+      font-size: 1rem;
+    }
+    section._article._i ._card > ._inside ._media {
+      width: 80%;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      position: relative;
+      order:1;
+      margin:-2rem auto 1rem;
+      max-height:40vh;
+      height: 400px;
+    }
+    section._article._i ._card > ._inside ._info {
+      width: 100%;
+      position: relative;
+      order:2;
+    } 
+    section._article._i ._card > ._inside ._info ._in {
+      padding: 0 0 1rem;
+      width: calc(100% - 2rem);
+      margin: 0 auto;
+    }
+    section._article._i ._card > ._inside ._info ._in ._activity{
+      display: flex;
+      grid-gap: 1rem;
+      justify-content: start;
+      margin-top: 2rem;
+      color: #fff;
+    }
+  }
+  @media(max-width:991px){
+    section._article._ii ._flex ._info,
+    section._article._ii ._flex ._media {
+      width: 100%;
+    }
+    section._article._ii ._flex ._media {
+      order: 2;
+    }
+    section._article._ii ._flex ._info {
+      order: 1;
+    }
+  }
+  @media(min-width:768px) and (max-width:991px){
+    section._article._ii ._flex ._media figure._video {
+      width: 80%;
+      height: 50vh;
+      min-height: 350px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+    section._article._ii ._flex ._info ._inside {
+      width: calc(50% - 1rem);
+    }
+  }
+  @media(min-width:576px) and (max-width:767px){
+    section._article._ii ._flex ._info ._inside {
+      width: calc(50% - 1rem);
+    }
+    section._article._ii ._flex ._media figure._video {
+      width: 100%;
+      height: 50vh;
+      min-height: 350px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+  }
+  @media(max-width:575px){
+    section._article._ii ._flex ._info ._inside {
+      width: 100%;
+    }
+    section._article._ii ._flex ._media figure._video {
+      width: 100%;
+      height: 50vh;
+      min-height: 350px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+  }
+/* END RECIPE */
+
+._card-article ._content-card ._title-card{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número máximo de líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 4rem;
+}

@@ -1,0 +1,63 @@
+<article class="_pdp _1 pdp-{{ product.id }}">
+  <div class="_content">
+    <div class="_media">
+      {% if product.featured_image %}
+        <figure class="_pic">
+          <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+          <a class=" _link-hide" href="{{ product.url }}"></a>
+        </figure>
+      {% endif %}
+      {% for image in product.metafields.custom.icons.value limit:3 %}
+        <figure class="_icon icon-{{ image.id }}">
+          <img src="{{ image | img_url: '1800x1800' }}" alt="Product Image Icon">
+        </figure>
+      {% endfor %}
+    </div>
+    <div class="_info">
+      <h4 class="_name">{{ product.title }}</h4>
+      <p class="_price">${{ product.price | money_without_currency }}</p>
+      <a class=" _link-hide" href="{{ product.url }}"></a>
+    </div>
+    <form class="add-to-cart-form" data-product-id="{{ product.id }}">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+
+      {% assign in_stock = false %}
+      {% for variant in product.variants %}
+        {% if variant.inventory_quantity > 0 %}
+          {% assign in_stock = true %}
+        {% endif %}
+      {% endfor %}
+      
+      <a class="_btn btn-add-to-cart-2 btn-add-cart {% if in_stock %}add-to-cart{% else %}open-modal{% endif %}" 
+         {% unless in_stock %} data-bs-toggle="modal" data-bs-target="#modal-klaviyo" {% endunless %}>
+        <div class="_in">
+          <span >
+            {% if in_stock %}
+              add <br>to cart
+            {% else %}
+              sign <br>me up!
+            {% endif %}
+          </span>
+          <figure class="_bg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="105" height="99" viewBox="0 0 105 99" fill="none">
+              <path d="M100.131 40.4917C97.292 37.7447 94.0231 35.8134 90.4847 34.4178C91.7125 31.5283 92.5362 28.4717 92.8212 25.1989C93.5413 17.0316 87.9669 11.0954 79.3671 11.0069C75.3366 10.9676 71.6066 11.7833 68.0837 13.1544C66.5814 9.49336 64.2812 6.2058 61.1003 3.48337C55.9611 -0.914772 49.2211 -1.19979 44.0561 2.92316C42.4035 4.24506 40.9063 5.82741 39.6526 7.50313C38.3004 9.30662 37.2073 11.2035 36.3214 13.1642C32.5292 11.5868 28.4624 10.8054 24.1833 11.0167C17.2723 11.3558 12.2886 15.6704 11.7135 22.049C11.527 24.0932 11.6514 26.2161 12.0088 28.2408C12.3922 30.403 13.0242 32.4522 13.8479 34.4178C10.1075 35.8577 6.71942 37.956 3.87527 40.875C-1.02041 45.8923 -1.3157 52.1087 3.20697 57.3963C4.26899 58.6396 5.55379 59.7502 6.90074 60.7183C9.1025 62.2957 11.4286 63.539 13.8583 64.5267C12.2679 68.0698 11.4286 71.8488 11.5892 75.839C11.8689 82.6697 16.2932 87.2595 23.4321 87.972C25.1054 88.1391 26.8461 88.0654 28.5194 87.8442C31.26 87.4806 33.8399 86.7975 36.2955 85.8639C37.7046 89.063 39.6422 92.036 42.3568 94.6601C48.7186 100.803 57.0594 100.37 62.9239 93.7756C65.0945 91.3382 66.7471 88.6895 68.006 85.8884C71.3993 87.2152 74.9999 88.0261 78.8905 88.0556C87.9669 88.1342 93.5413 82.2323 92.7745 73.6326C92.4896 70.4138 91.6659 67.3966 90.4433 64.5414C93.4946 63.3178 96.3854 61.6962 99.0586 59.5536C105.654 54.2611 106.14 46.3248 100.126 40.4966L100.131 40.4917Z" 
+                fill="{{ product.metafields.custom.second_color }}"/>
+            </svg>
+          </figure>
+        </div>
+      </a>
+    </form>
+  </div>
+</article>
+
+<style>
+  article._pdp._1.pdp-{{ product.id }} ._content ._btn ._in>span{
+    color:{{ product.metafields.custom.color }};
+  }
+  article._pdp._1.pdp-{{ product.id }}{
+    background:{{ product.metafields.custom.main_color }};
+  }
+  article._pdp._1.pdp-{{ product.id }}:hover{
+    background:{{ product.metafields.custom.second_color }};
+  }
+</style>

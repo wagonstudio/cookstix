@@ -1,0 +1,84 @@
+<article class="_pdp _1 pdp-{{ product.id }}">
+  <div class="_content">
+    <div class="_media">
+      {% if product.featured_image %}
+        <figure class="_pic">
+          <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+          <a class=" _link-hide" href="{{ product.url }}"></a>
+        </figure>
+      {% endif %}
+      {% for image in product.metafields.custom.icons.value limit:3 %}
+        <figure class="_icon icon-{{ image.id }}">
+          <img src="{{ image | img_url: '1800x1800' }}" alt="Product Image Icon">
+        </figure>
+      {% endfor %}
+    </div>
+    <div class="_info">
+      <h4 class="_name">{{ product.title }}</h4>
+      <a class=" _link-hide" href="{{ product.url }}"></a>
+    </div>
+    <form class="add-to-cart-form" data-product-id="{{ product.id }}">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+
+      {% assign in_stock = false %}
+      {% for variant in product.variants %}
+        {% if variant.inventory_quantity > 0 %}
+          {% assign in_stock = true %}
+        {% endif %}
+      {% endfor %}
+      
+      <a class="_btn btn-add-cart {% if in_stock %}add-to-cart{% else %}open-modal{% endif %}" 
+         {% unless in_stock %} data-bs-toggle="modal" data-bs-target="#modal-klaviyo" {% endunless %}>
+        <div class="_in">
+          <span>
+            {% if in_stock %}
+              add <br>to cart
+            {% else %}
+              sign <br>me up!
+            {% endif %}
+          </span>
+          <figure class="_bg">
+            <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-white.svg?v=1737131017" />
+          </figure>
+        </div>
+      </a>
+
+    </form>
+
+
+    <a href="{{ product.url }}" class="_link-hide d-none"></a>
+  </div>
+</article>
+
+<style>
+  article._pdp._1.pdp-{{ product.id }} ._content ._btn ._in>span{
+    color:{{ product.metafields.custom.main_color }};
+  }
+  article._pdp._1.pdp-{{ product.id }}{
+    background:{{ product.metafields.custom.main_color }};
+  }
+  article._pdp._1.pdp-{{ product.id }}:hover{
+    background:{{ product.metafields.custom.second_color }};
+  }
+</style>
+
+<div class="modal _modalpdp" id="modal-{{ product.id }}" tabindex="-1" aria-labelledby="modal-{{ product.id }}-Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="modal-body">
+        <div class="_info">
+          <h3 class="_title">🔥Think Outside the (Stock) Box🔥</h3>
+          <p class="_text">Something game-changing is simmering… and it’s about to shake up your kitchen.  <b>🚀Be the first to know when we launch.🚀</b> <br>📩 Sign up now for special offers, and a sneak peek 
+before anyone else.</p>
+        </div>
+        <div class="klaviyo-form-VBrgcN"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

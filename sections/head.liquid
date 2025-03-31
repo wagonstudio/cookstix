@@ -1,0 +1,168 @@
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+<header class="_header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <div class="_container ">
+    <div class="_flex">
+      <div class="_one">
+        {%- liquid
+          if section.settings.menu != blank
+            render 'header-drawer'
+          endif
+        -%}
+  
+        {%- liquid
+          if section.settings.menu != blank
+            if section.settings.menu_type_desktop == 'dropdown'
+              render 'header-dropdown-menu'
+            elsif section.settings.menu_type_desktop != 'drawer'
+              render 'header-mega-menu'
+            endif
+          endif
+        %}
+        <figure class="_brand">
+          <div class="_logo">
+            <div class="_media">
+              <a href="/">
+                {%- if settings.logo != blank -%}
+                  <div class="header__heading-logo-wrapper">
+                    {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                    {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                    {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+                    {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                    {{ settings.logo | image_url: width: 600 | image_tag:
+                      class: 'header__heading-logo',
+                      widths: widths,
+                      height: logo_height,
+                      width: settings.logo_width,
+                      alt: logo_alt,
+                      sizes: sizes,
+                      preload: true
+                    }}
+                  </div>
+                {%- else -%}
+                  <span class="h2">{{ shop.name }}</span>
+                {%- endif -%}
+              </a>
+            </div>
+            <figure class="_bg">
+              <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/bg-logo.svg?v=1736975360">
+            </figure>
+          </div>
+        </figure>
+      </div>
+      <div class="_two">
+        <div class="_menu d-none d-lg-flex">
+          <ul class="_nav nav">
+            {% for item in linklists.main-menu.links %}
+              <li class="_item{% if item.active %} current{% endif %}">
+                <a href="{{ item.url }}" aria-label="Go to {{ item.title }} page" ><span class="_h4" role="button">{{ item.title }}</span></a>
+                {% if item.links and item.links.size > 0 %}
+                  <ul class="sub-menu">
+                    {% for subitem in item.links %}
+                      <li class="_item{% if item.active %} current{% endif %}">
+                        <a href="{{ subitem.url }}" aria-label="Go to {{ item.title }} page"><span class="_h4" role="button">{{ subitem.title }}</span></a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="_icons ">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+            {%- endcase -%}
+          {%- endfor -%}
+          <a  class="_icon btnactivemenu" id="cart-icon-bubble">
+            <span class="_svg-wrapper"><i class="bi bi-cart-fill"></i></span>
+            <div class="_bubble" data-cart-view>
+              <span rv-show="cart.item_count | gt 0">
+                <span class="mega-nav-count nav-main-cart-amount count-items"  data-cart-count-bubble>
+                  <span data-cart-render="item_count"></span>
+                </span>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="_action ">
+          <a class="_superbtn _1" href="https://mycookstix.com/collections/shop">
+            <div class="_in">
+              <span>shop <br>now</span>
+              <figure class="_bg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 130 130" fill="none">
+                  <path d="M123.097 46.7172C119.188 43.5178 114.862 41.4416 110.28 40.1012C111.387 36.1626 111.969 32.0609 111.852 27.7502C111.573 16.9916 103.819 10.0014 93.1562 11.0557C88.1592 11.5526 83.6569 13.1248 79.4909 15.3935C77.1055 10.8192 73.7856 6.84094 69.4561 3.72009C62.4613 -1.32168 54.0737 -0.776917 48.2685 5.30726C46.4115 7.25751 44.7842 9.52657 43.4719 11.8844C42.056 14.4224 40.9743 17.047 40.1583 19.7268C35.2359 18.1836 30.0877 17.7169 24.8187 18.5748C16.3089 19.9574 10.7557 26.2671 10.9581 34.6711C11.0202 37.3649 11.4785 40.1189 12.2115 42.713C12.9962 45.4832 14.0727 48.072 15.3746 50.5256C10.949 52.9138 7.05404 56.1136 3.95038 60.3106C-1.39301 67.5255 -0.867452 75.6798 5.49145 81.9664C6.98489 83.4448 8.73519 84.7196 10.542 85.8C13.4948 87.5595 16.5537 88.866 19.7042 89.8247C18.2426 94.6658 17.7451 99.7126 18.516 104.899C19.8418 113.777 25.9787 119.166 34.9216 119.125C37.0178 119.116 39.1628 118.783 41.2034 118.266C44.5451 117.419 47.6421 116.176 50.5493 114.624C52.753 118.608 55.5786 122.225 59.3166 125.281C68.0757 132.433 78.3428 130.734 84.6597 121.329C86.9984 117.852 88.6652 114.17 89.8226 110.342C94.2151 111.613 98.7901 112.181 103.612 111.691C114.864 110.559 120.921 102.097 118.738 90.976C117.924 86.8134 116.471 82.987 114.548 79.4266C118.151 77.4144 121.499 74.9045 124.502 71.7442C131.91 63.9389 131.376 53.5136 123.091 46.7243L123.097 46.7172Z" fill="#9E1F63"/>
+                </svg>
+              </figure>
+            </div>
+          </a>
+          <button class="_btn_menu _1 d-lg-none">
+            <div class="_in">
+              <span class="_1"></span>
+              <span class="_2"></span>
+              <span class="_3"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="_supermenu">
+    <div class="_in" data-lenis-prevent>
+        <div class="_menu">
+          <ul class="_nav nav">
+            {% for item in linklists.supermenu.links %}
+              <li class="_item{% if item.active %} current{% endif %}">
+                <a href="{{ item.url }}" aria-label="Go to {{ item.title }} page" ><span class="_h4" role="button">{{ item.title }}</span></a>
+                {% if item.links and item.links.size > 0 %}
+                  <ul class="sub-menu">
+                    {% for subitem in item.links %}
+                      <li class="_item{% if item.active %} current{% endif %}">
+                        <a href="{{ subitem.url }}" aria-label="Go to {{ item.title }} page"><span class="_h4" role="button">{{ subitem.title }}</span></a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+            <li class="_item _item-icon d-none">
+              <a href="{{ routes.cart_url }}">
+                <i class="bi bi-cart-fill"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="_icons">
+          <div class="_list">
+            <a class="_icon" href="https://www.facebook.com/profile.php?id=61569109213447" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a class="_icon" href="https://www.instagram.com/cookstix/" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+        </div>
+    </div>
+</div>
+
+<span class="_trigger" id="trigger_header"></span>
+
+{%- if settings.cart_type == "notification" -%}
+  {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
+{%- endif -%}
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Head",
+    "settings": []
+  }
+{% endschema %}

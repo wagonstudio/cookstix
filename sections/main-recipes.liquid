@@ -1,0 +1,178 @@
+<section class="_recipes _i">
+  <div class="_head">
+    <div class="_container _1">
+      <div class="_inside">
+        <h2 class="_title">we love soup, but <br class="d-none d-lg-block">cookstix goes beyond!</h2>
+      </div>
+    </div>
+    <figure class="_bg">
+      <img class="_icons _left" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/details-blue-left.svg?v=1736974944">
+      <img class="_icons _right" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/details-blue-right.svg?v=1736974963">
+      <figure class="_plop _1"></figure>
+    </figure>
+  </div>
+  <div class="_body">
+    <div class="_container _1">
+      <div class="_filter">
+        {% assign all_tags = "" %}
+        {% for article in blog.articles %}
+          {% for tag in article.tags %}
+            {% unless all_tags contains tag %}
+              {% assign all_tags = all_tags | append: tag | append: "," %}
+            {% endunless %}
+          {% endfor %}
+        {% endfor %}
+      
+        {% assign tag_list = all_tags | split: "," | sort %}
+      
+        <div class="filter-tags">
+          <button class="filter-btn active" data-tag="all">all recipes</button>
+          {% for tag in tag_list %}
+            {% if tag != "" %}
+              <button class="filter-btn" data-tag="{{ tag | handleize }}">{{ tag }}</button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {%- paginate blog.articles by 6 -%}
+      
+        {% assign articles_with_difficulty = '' %}
+      
+        {% for article in blog.articles %}
+          {% assign difficulty = article.metafields.custom.difficulty | default: 5 %} 
+          {% assign articles_with_difficulty = articles_with_difficulty | append: difficulty | append: ':' | append: article.id | append: ',' %}
+        {% endfor %}
+      
+        {%- assign sorted_articles = articles_with_difficulty | split: ',' | sort -%}
+      
+        <div class="blog-articles">
+          {%- for item in sorted_articles -%}
+            {% assign article_id = item | split: ':' | last | plus: 0 %}
+            {% assign article = blog.articles | where: 'id', article_id | first %}
+            
+            <div class="blog-articles__article article" data-tags="{% for tag in article.tags %}{{ tag | handleize }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+              {%- render 'card_article', article: article -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+      
+      {%- endpaginate -%}
+
+    </div>
+  </div>
+</section>
+<section class="_recipes _ii">
+  <div class="_content">
+    <div class="_container _1">
+      <div class="_head">
+        <h2 class="_title">one foundation, three bold flavors. <br class="d-none d-lg-block">unlock your inner chef.</h2>
+        <a href="https://mycookstix.com/collections/shop" class="_btn _1">
+          <span>shop all</span>
+        </a>
+      </div>
+      <div class="_cards-pdp">
+        {% assign shop = collections.frontpage %}
+        {% for pdp in shop.products %}
+          {% if pdp.id != product.id %}
+            {% render 'pdp', product: pdp %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <figure class="_bg">
+    <figure class="_plop _1">
+      <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/curve_yellow_1.svg?v=1740968859">
+    </figure>
+    <figure class="_plop _2"></figure>
+    <div class="_bgin"></div>
+  </figure>
+  <aside class="_content_marquee _1">
+    <div class="_marquee _1">
+      <div class="_track">
+        <div class="_content">
+          <h6 class="_h6 _anek-d _w-500">
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Sugar 
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Added Chicken Flavor
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Clean and high-quality ingredients   
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Lightweight form
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Sugar 
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Added Chicken Flavor
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Clean and high-quality ingredients   
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Lightweight form
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Sugar 
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> No Added Chicken Flavor
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Clean and high-quality ingredients   
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span> Lightweight form
+            <span><img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/asterisco-yellow.svg?v=1737141768" /></span>    
+          </h6>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const articles = document.querySelectorAll(".blog-articles__article");
+      const recipesBody = document.querySelector("section._recipes._i ._body");
+  
+      function updateBodyClass(selectedTag) {
+          // Remover todas las clases previas que comiencen con 'filter-'
+          recipesBody.classList.forEach(cls => {
+              if (cls.startsWith("filter-")) {
+                  recipesBody.classList.remove(cls);
+              }
+          });
+  
+          // Agregar la nueva clase correspondiente al filtro activo
+          recipesBody.classList.add(`filter-${selectedTag}`);
+      }
+  
+      filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+              const selectedTag = this.getAttribute("data-tag");
+  
+              // Remover clase activa de todos los botones
+              filterButtons.forEach(btn => btn.classList.remove("active"));
+              this.classList.add("active");
+  
+              // Filtrar los artículos
+              articles.forEach((article) => {
+                  const articleTags = article.getAttribute("data-tags").split(",");
+  
+                  if (selectedTag === "all" || articleTags.includes(selectedTag)) {
+                      article.style.display = "block";
+                  } else {
+                      article.style.display = "none";
+                  }
+              });
+  
+              // Actualizar la clase en el ._body
+              updateBodyClass(selectedTag);
+          });
+      });
+  
+      // Ejecutar la función al cargar la página para manejar estados iniciales
+      const initialActiveButton = document.querySelector(".filter-btn.active");
+      if (initialActiveButton) {
+          updateBodyClass(initialActiveButton.getAttribute("data-tag"));
+      }
+  });
+
+</script>
+
+
+
+
+{% schema %}
+  {
+    "name": "Main Recipes",
+    "settings": []
+  }
+{% endschema %}

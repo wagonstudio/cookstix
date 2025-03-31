@@ -1,0 +1,567 @@
+/* I */
+  section._about._1 {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 20vw;
+    margin-bottom: -5vw;
+    background: #0098DD;
+  }
+  section._about._1 ._two ._medias ._media {
+    position: absolute;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  section._about._1 ._two ._medias {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section._about._1 ._one ._in ._title {
+    font-size: 4.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    text-transform: lowercase;
+    font-family: 'tenon', sans-serif;
+    color: #fff;
+  }
+  section._about._1 ._one ._in ._subtitle {
+    color: #fff;
+    font-family: 'Tenon', sans-serif;
+    font-size: 1.6875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: lowercase;
+    margin-bottom: 2rem;
+  }
+  section._about._1 ._two ._medias ._media img {
+    width:100%;
+  }
+  section._about._1 ._two ._medias ._media._1 {
+    position: absolute;
+    border-radius: 2rem;
+    overflow: hidden;
+    z-index: 2;
+    width: 50%;
+    right: 40%;
+  }
+  section._about._1 ._two ._medias ._media._2 {
+    margin-left: auto;
+    width: 60%;
+    position: relative;
+    z-index: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+    top: 9rem;
+  }
+  section._about._1 ._content {
+    position: relative;
+    z-index: 2;
+  }
+  section._about._1 ._one ._cards {
+    position: relative;
+  }
+  section._about._1 ._one ._cards ._card p {
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  section._about._1 ._one ._cards ._card p{
+    margin-bottom:1rem;
+    line-height:1.1;
+  }
+  section._about._1 ._one ._cards ._card p:last-of-type{
+    margin-bottom:0;
+  }
+  section._about._1 ._one ._cards ._card._1 {
+    width: 500px;
+    max-width: 100%;
+    margin-left: auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background: #1D3B8A;
+    color: #fff;
+    font-family: 'tenon', sans-serif;
+  }
+  section._about._1 ._one ._cards ._card._2 {
+    width: 500px;
+    max-width: 100%;
+    margin-left: auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background: #b7be10;
+    color: #1d3b8a;
+    font-family: tenon, sans-serif;
+    position: absolute;
+    bottom: -40%;
+    right: -20rem;
+    transform: rotate(-5deg);
+  }
+/* END I */
+/* II */
+  section._about._2 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  section._about._2 figure {
+    width: 100%;
+    overflow: hidden;
+    max-width: 100vw;
+  }
+  section._about._2 figure img {
+    width: 102vw;
+    object-fit: cover;
+    max-width: 120vw;
+  }
+/*  END II*/
+/* III */
+  section._about._3 {
+    position: relative;
+    z-index: 1;
+    background: #712B62;
+    padding: 15vw 0 5rem;
+    margin-top: -5vw;
+  }
+  section._about._3 ._first ._card {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 90vw;
+  }
+  section._about._3 ._first ._card figure._ingredient {
+    position: absolute;
+    width: max-content;
+    max-width: 50%;
+    z-index: 4;
+  }
+  section._about._3 ._first ._card figure._ingredient img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  section._about._3 ._first ._card figure._ingredient._chicken {
+    top: 0;
+    left: 0;
+    height: 8vw;
+  }
+  section._about._3 ._first ._card figure._ingredient._zanahoria {
+    bottom: -3vw;
+    right: -4rem;
+    height: 13vw;
+    transform: rotate(45deg);
+  }
+  section._about._3 ._first ._card figure._ingredient._cebolla {
+    height: 6vw;
+    right: 0;
+    bottom: 7vw;
+  }
+  section._about._3 ._first ._card figure._ingredient._pepino {
+    height: 4vw;
+    right: 2rem;
+    top: 2rem;
+  }
+  section._about._3 ._first ._card figure._media-card {
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 2rem;
+    height: calc(100% - 4rem);
+    top: 2rem;
+    margin: 0;
+    max-height: calc(100% - 4rem);
+  }
+  section._about._3 ._first ._card .splide__pagination {
+    display: block !important;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 10%;
+    padding:0;
+    z-index:4;
+  }
+  section._about._3 ._first {
+    overflow: hidden;
+  }
+  section._about._3 ._first ._card .splide__pagination .splide__pagination__page {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #fff;
+    font-family: 'Tenon', sans-serif;
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+  section._about._3 ._first ._card .splide__pagination .splide__pagination__page.is-active {
+    border-color: #fff;
+  }
+  section._about._3 ._first ._card .splide__slide>._flex{
+    position:relative;
+    width: 100%;
+    height:100%;
+  }
+  section._about._3 ._first ._card ._content-card {
+    background: #1d3b8a;
+    width: calc(100% - 10rem);
+    border-radius: 2rem;
+    padding: 4rem 10% 4rem calc(50% - 7.5rem);
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    font-family: tenon, sans-serif;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  section._about._3 ._first ._card .splide__slide {
+    align-items: center;
+    display: flex;
+  }
+  section._about._3 ._first ._card figure._media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  section._about._3 ._first ._card .splide__arrows {
+    position: absolute;
+    bottom: 2rem;
+    left: calc(50% + 2rem);
+    z-index: 4;
+    grid-gap: 1rem;
+    display: flex;
+  }
+  section._about._3 ._first ._card .splide__arrows .splide__arrow {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 999rem;
+    background: #fff;
+    border: 0;
+    font-size: 1vw;
+    line-height: 1;
+  }
+  section._about._3 ._first ._card ._content-card ._subtitle {
+    font-size: 1.9vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom:1rem;
+    text-transform: lowercase;
+  }
+  section._about._3 ._first ._card ._content-card ._title-card {
+    font-size: 4.1vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: lowercase;
+    margin-bottom: 2rem;
+  }
+  section._about._3 ._first ._card ._content-card ._description-card {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: lowercase;
+  }
+  section._about._3 ._first ._card ._content-card ._description-card p a{
+    color:inherit;
+    font-weight:800;
+  }
+  section._about._3 ._second {
+    position: relative;
+  }
+  section._about._3 ._second ._content {
+    position: relative;
+    padding: 25vh 0;
+    z-index:2;
+  }
+  section._about._3 ._second ._content ._container {
+    width: 55vw;
+    margin: 0 auto;
+    text-align: center;
+    max-width: calc(90vw);
+  }
+  section._about._3 ._second ._medias {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  section._about._3 ._second ._medias figure._media {
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  section._about._3 ._second ._medias figure._media img {
+    width: 100%;
+    height: 100%;
+  }
+  section._about._3 ._second ._medias figure._media._1 {
+    width: 20vw;
+    border-radius: 10px 0 0 10px;
+    right: 0;
+    bottom: 0;
+  }
+  section._about._3 ._second ._medias figure._media._2 {
+    width: 15vw;
+    top: 20%;
+    border-radius: 0 10px 10px 0;
+  }
+  section._about._3 ._second ._medias figure._media._3 {
+    right: 9vw;
+    top: 5rem;
+    width: 13vw;
+  }
+
+  section._about._3 ._content ._title {
+    color: #fff;
+    font-family: 'Tenon', sans-serif;
+    font-size: 5.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: lowercase;
+    text-align: center;
+  }
+  section._about._3 ._content ._description {
+    color: #fff;
+    font-family: Tenon;
+    font-size: 1.6vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: lowercase;
+    margin-top: 3rem;
+  }
+/* END III */
+
+section._about._1 ._flex {
+    flex-wrap: wrap;
+}
+/* RESPONSIVE */
+  @media(min-width:992px){
+    section._about._1 ._one ._in{
+      margin-bottom:5rem;
+    }
+    section._about._1 ._one,
+    section._about._1 ._two {
+      width: calc(50% - 1rem);
+    }
+    section._about._3 ._first ._card ._content-card ._description-card {
+      font-size: 1.52vw;
+    }
+  }
+  @media(max-width:991px){
+    section._about._1 ._one ._in{
+      margin-bottom:2rem;
+    }
+    section._about._1{
+      padding-top: 3rem;
+    }
+    section._about._3 ._second ._content ._container{
+      max-width:calc(100% - 4rem);
+    }
+    section._about._3{
+      overflow:hidden;
+    }
+    section._about._3 ._first ._card .splide__pagination {
+        display: block !important;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-left: auto;
+        width: max-content;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    section._about._3 ._first ._card ._content-card ._description-card {
+      font-size: 1.2rem;
+    }
+    
+    section._about._3 ._first ._card .splide__slide>._flex{
+      flex-wrap:wrap;
+    }
+    section._about._1 ._one,
+    section._about._1 ._two {
+      width: 100%;
+    }
+    section._about._1 ._flex {
+      flex-wrap: wrap;
+      grid-gap: 4rem;
+    }
+    section._about._1 ._one ._cards ._card._1 {
+      width: 700px;
+      margin-left: inherit;
+    }
+    section._about._1 ._one ._cards ._card._2 {
+      width: 500px;
+      margin-left: auto;
+      position: relative;
+      right: inherit;
+    }
+    section._about._1 ._two ._medias {
+      width: 600px;
+      max-width:100%;
+    }
+    section._about._1 ._two ._medias ._media._1 {
+      width: 60%;
+      right: inherit;
+      margin-top: -5rem;
+    }
+    section._about._1 ._two ._medias ._media._2{
+      top:inherit;
+      margin-top: 5rem;
+    }
+    section._about._1 ._one {
+      order: 2;
+    }
+    section._about._1 ._two {
+      order: 1;
+    }
+    section._about._3 ._first ._card .splide__slide>._flex figure._media-card {
+      width: 50%;
+      min-height: 150px;
+      min-width: 250px;
+      position: relative;
+      height: max-content;
+      top: inherit;
+      border-radius: 1rem;
+      margin: 0 0 -10rem 2rem;
+    }
+    section._about._3 ._first ._card .splide__slide>._flex figure._media-card img{
+      max-height: 100%;
+    }
+    section._about._3 ._first ._card .splide__slide>._flex ._content-card {
+      width: 100%;
+      margin-left: auto;
+      padding: 12rem 2rem 2rem;
+      min-height: max-content;
+    }
+    section._about._3 ._first ._card .splide__slide>._flex{
+      height:max-content;
+    }
+    section._about._3 ._first ._card .splide__arrows{
+      position: relative;
+      bottom: inherit;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      grid-gap: 1rem;
+      display: flex;
+      margin: 1rem auto 0;
+      width: 100%;
+      justify-content: center;
+    }
+    section._about._3 ._first ._card figure._ingredient._pepino {
+        height: inherit;
+        right: 17%;
+        top: 29%;
+        width: 7%;
+        min-width: 60px;
+    }
+    section._about._3 ._first ._card figure._ingredient._cebolla {
+        right: -2rem;
+        height: inherit;
+        width: 11%;
+        bottom: inherit;
+        top: 34%;
+        min-width: 80px;
+    }
+    section._about._3 ._first ._card figure._ingredient._zanahoria {
+      
+        height: inherit;
+        width: 11%;
+        bottom: inherit;
+        top: 6%;
+        min-width: 120px;
+        right: -2rem;
+    }
+    section._about._3 ._first ._card figure._ingredient._chicken {
+      top: 0;
+      left: 60%;
+      height: inherit;
+      width: 15%;
+    }
+    section._about._3 ._first ._card .splide__arrows .splide__arrow {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999rem;
+      background: #fff;
+      border: 0;
+      font-size: 1rem;
+      line-height: 1;
+      color: #1d3b8a;
+    }
+    section._about._3 ._first ._card ._content-card ._title-card{
+      font-size:2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    section._about._3 ._first ._card ._content-card ._subtitle{
+      font-size:1rem;
+      margin-bottom:0.5rem;
+    }
+    section._about._3 ._second ._medias{
+      height: calc(100% + 3rem);
+    }
+    section._about._3 ._second ._medias figure._media{
+      border-radius:1rem !important;
+    }
+    section._about._3 ._second ._medias figure._media._1 {
+      width: 17%;
+      min-width:200px;
+    }
+    section._about._3 ._second ._medias figure._media._2 {
+      width: 20%;
+      min-width: 150px;
+      top: 6rem;
+      border-radius: 0 2rem 2rem 0;
+    }
+    section._about._3 ._second ._medias figure._media._3 {
+      right: 1rem;
+      top: 5rem;
+      width: 20%;
+      min-width: 120px;
+    }
+    section._about._3 ._content ._description{
+      font-size:1.2rem;
+      margin-top: 1rem;
+    }
+    section._about._3 ._second ._content{
+      padding: 15rem 0 7rem;
+    }
+    section._about._3 ._content ._title{
+      font-size:2.4rem;
+    }
+    section._about._3 ._second ._content ._container{
+      width:450px;
+    }
+    section._about._3{
+      padding-bottom:9rem;
+    }
+    
+    
+  }
+  @media(max-width:767px){
+    section._about._1 ._one ._in ._title{
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+    section._about._1 ._one ._in ._subtitle{
+      font-size:1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+  }
+
+
+/* END RESPONSIVE */

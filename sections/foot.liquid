@@ -1,0 +1,107 @@
+<footer class="_footer">
+  <div class="_container _1">
+      <div class="_flex">
+      <div class="_col _i">
+        <figure class="_brand">
+          <a href="/">
+            <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/brand.svg?v=1736889431">
+          </a>
+        </figure>
+      </div>
+      <div class="_col _ii">
+        <div class="_menu _1">
+          <ul class="_nav">
+            {% for item in linklists.footer.links %}
+              <li class="_item{% if item.active %} current{% endif %}">
+                <a href="{{ item.url }}" aria-label="Go to {{ item.title }} page" ><span class="_h4" role="button">{{ item.title }}</span></a>
+                {% if item.links and item.links.size > 0 %}
+                  <ul class="sub-menu">
+                    {% for subitem in item.links %}
+                      <li class="_item{% if item.active %} current{% endif %}">
+                        <a href="{{ subitem.url }}" aria-label="Go to {{ item.title }} page"><span class="_h4" role="button">{{ subitem.title }}</span></a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="_menu _2">
+          <ul class="_nav">
+            {% for item in linklists.second-footer.links %}
+              <li class="_item{% if item.active %} current{% endif %}">
+                <a href="{{ item.url }}" aria-label="Go to {{ item.title }} page" ><span class="_h4" role="button">{{ item.title }}</span></a>
+                {% if item.links and item.links.size > 0 %}
+                  <ul class="sub-menu">
+                    {% for subitem in item.links %}
+                      <li class="_item{% if item.active %} current{% endif %}">
+                        <a href="{{ subitem.url }}" aria-label="Go to {{ item.title }} page"><span class="_h4" role="button">{{ subitem.title }}</span></a>
+                      </li>
+                    {% endfor %}
+                    
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+            <li class="_item">
+              <a data-bs-toggle="modal" data-bs-target="#modal-accesibility" target="_blank" aria-label="Go to accesibility popup"<span class="_h4" role="button">accesibility</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="_col _iii">
+        <div class="_menus">
+          <div class="_icons">
+            <a href="https://www.facebook.com/profile.php?id=61569109213447" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/cookstix/" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+          <div class="_menu">
+            <ul class="_nav">
+              {% for item in linklists.legal.links %}
+                <li class="_item{% if item.active %} current{% endif %}">
+                  <a href="{{ item.url }}" aria-label="Go to {{ item.title }} page" ><span class="_h4" role="button">{{ item.title }}</span></a>
+                  {% if item.links and item.links.size > 0 %}
+                    <ul class="sub-menu">
+                      {% for subitem in item.links %}
+                        <li class="_item{% if item.active %} current{% endif %}">
+                          <a href="{{ subitem.url }}" aria-label="Go to {{ item.title }} page"><span class="_h4" role="button">{{ subitem.title }}</span></a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+            <p class="mb-0">cookstix <span class="_current-year"></span> - all rights reserved</p>
+            <p>designed by <a href="https://wagondesignstudio.com" target="_blank">Wagon Studio</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="_actions">
+        <a class="_btn _1" href="https://a0rji7-2c.myshopify.com/pages/contact">
+          <span>contact <br>us</span>
+          <figure class="_bg">
+            <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/tag-blue.svg?v=1737081001">
+          </figure>
+        </a>
+        <figure class="_chicken">
+          <img class="_ala" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/ala.svg?v=1737080936">
+          <img class="_chicken" src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/chicken-2.svg?v=1737080877">
+        </figure>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+{% schema %}
+  {
+    "name": "Foot",
+    "settings": []
+  }
+{% endschema %}

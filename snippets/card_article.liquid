@@ -1,0 +1,64 @@
+<div class="_card-article">
+  <figure class="_media-card">
+    {% if article.metafields.custom.preview %}
+      <img src="{{ article.metafields.custom.preview | file_url }}" alt="{{ article.title }}">
+    {% elsif article.image %}
+      <img src="{{ article.image | img_url: 'large' }}" alt="{{ article.title }}">
+    {% else %}
+      <img src="https://cdn.shopify.com/s/files/1/0901/1216/4158/files/pic-slider-1.jpg?v=1740080562" alt="No Image">
+    {% endif %}
+    <a href="{{ article.url }}" class="_link-hide"> </a>
+  </figure>
+  <div class="_content-card">
+    <div class="_kind">
+      {{ article.metafields.custom.kind }}
+    </div>
+    <div class="_inside-card">
+      <h4 class="_title-card">{{ article.title }}</h4>
+      <div class="_description-card d-none">
+        {{ article.content | truncate: 120 }}... <a href="{{ article.url }}">read more</a>
+      </div>
+    </div>
+    <div class="_activity">
+      <div class="_difficulty">
+        <p class="_subtitle">Difficulty</p>
+        <div class="_dots">
+          {% assign difficulty_raw = article.metafields.custom.difficulty %}
+          {% assign difficulty = difficulty_raw | default: 1 | plus: 0 %}
+          {% for i in (1..5) %}
+            {% if i <= difficulty %}
+              <span class="_dot _full"></span>
+            {% else %}
+              <span class="_dot"></span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="_time">
+        <p class="_subtitle">Time</p>
+        <div class="_timing">
+           {% assign total_minutes = article.metafields.custom.time | default: 0 %}
+                    
+            {% if total_minutes >= 60 %}
+              {% assign hours = total_minutes | divided_by: 60 %}
+              {% assign minutes = total_minutes | modulo: 60 %}
+              <p class="data">
+                {% if hours == 1 %}
+                  {{ hours }} hr
+                {% else %}
+                  {{ hours }} hrs
+                {% endif %}
+                
+                {% if minutes > 0 %}
+                  {{ minutes }} min
+                {% endif %}
+              </p>
+            {% else %}
+              <p class="data">{{ total_minutes }} min</p>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="{{ article.url }}" class="_link-hide"> </a>
+</div>
